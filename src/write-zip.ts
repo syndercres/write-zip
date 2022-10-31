@@ -42,3 +42,4 @@ function shortest(array1: (number|string)[], array2: (number|string)[]): number 
     }
     return shortest;
 }
+export default shortest;
