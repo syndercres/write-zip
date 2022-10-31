@@ -1,5 +1,3 @@
-import { generateKeyPair } from "crypto"
-
 /*
 
 function shortest:
@@ -35,4 +33,12 @@ for i=0 to i=arrayLength
     let tuple = [Arr1[i],Arr2[i]]
     push tuple to returnArr
 
-    /*
+*/
+
+function shortest(array1: (number|string)[], array2: (number|string)[]): number {
+    let shortest = array1.length;
+    if (array2.length < shortest) {
+        shortest = array2.length;
+    }
+    return shortest;
+}
