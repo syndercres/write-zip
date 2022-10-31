@@ -42,4 +42,14 @@ function shortest(array1: (number|string)[], array2: (number|string)[]): number 
     }
     return shortest;
 }
-export default shortest;
+
+function writeZip(array1: (number|string)[], array2: (number|string)[]): (number|string)[][] {
+    const arrayLength = shortest(array1, array2);
+    let returnArray = [];
+    for (let i = 0; i < arrayLength; i++) {
+        let tuple = [array1[i], array2[i]];
+        returnArray.push(tuple);
+    }
+    return returnArray;
+}
+export {writeZip, shortest};
